@@ -6,20 +6,19 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "course")
 public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String username;
+    private String name;
     private String description;
 
     public Course() {
     }
 
-    public Course(String username, String description) {
-        this.username = username;
+    public Course(String name, String description) {
+        this.name = name;
         this.description = description;
     }
 }
